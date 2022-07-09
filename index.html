@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  
+
+  <body>
+    <h1 id ="MainTitle">Hello Worldddd!</h1>
+    </p>
+    
+    <script>
+      
+      
+var config = {
+  method: 'get',
+  url: 'http://localhost:8080/test',
+  headers: { 
+    
+  }
+};
+
+axios(config)
+.then(function (response) {
+  console.log(JSON.stringify(response.data));
+  document.getElementById("MainTitle").innerHTML = JSON.stringify(response.data)
+})
+.catch(function (error) {
+  console.log(error);
+});
+
+
+
+    </script>
+  </body>
+  
+</html>
